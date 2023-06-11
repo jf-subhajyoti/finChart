@@ -1,6 +1,6 @@
 import './App.css';
 
-import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
+import { Link, Routes, Route } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
 
 import { Navbar, Exchanges, HomePage, StockDetails, Stocks, News } from './components';
@@ -23,9 +23,18 @@ function App() {
             </Routes>
           </div>            
         </Layout>
-      </div>
-      <div className="footer">
-
+        <div className="footer">
+          <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>
+            Stock Market App <br />
+            All rights reserved
+          </Typography.Title>
+          <Space>
+            <Link to="/">Home</Link>
+            <Link to="/exchanges">Exchanges</Link>
+            <Link to="/stocks">Stocks</Link>
+            <Link to="/news">News</Link>
+          </Space>
+        </div>
       </div>
     </div>
   );
